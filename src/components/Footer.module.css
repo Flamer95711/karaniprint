@@ -1,0 +1,171 @@
+.footer {
+  background-color: #1a1f2e;
+  color: #e8eaf0;
+  padding: 64px 0 0;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+/* Brand */
+.brand {}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.logoIcon {
+  width: 38px;
+  height: 38px;
+  background: var(--primary-container);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoName {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: #9da5b4;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.certBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Link Groups */
+.linkGroup {}
+
+.linkGroupTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  font-size: 0.875rem;
+  color: #9da5b4;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--gold-light);
+}
+
+/* Newsletter */
+.newsletter {}
+
+.newsletterDesc {
+  font-size: 0.875rem;
+  color: #9da5b4;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.newsletterForm {
+  display: flex;
+}
+
+.subscribeBtn {
+  padding: 10px 20px;
+  background: var(--primary-container);
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  background: var(--primary);
+}
+
+/* Bottom Row */
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.copyright {
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.bottomLink {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.bottomLink:hover {
+  color: #9da5b4;
+}
+
+.statBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+@media (max-width: 1024px) {
+  .topRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

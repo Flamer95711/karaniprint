@@ -1,0 +1,355 @@
+.hero {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #fcf9f8 100%);
+  padding: 80px 0;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.heroLeft h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 16px 0 20px;
+  line-height: 1.2;
+}
+
+.heroDesc {
+  font-size: 1.0625rem;
+  color: var(--on-surface-variant);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.heroRight {}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.heroStat {
+  background: white;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.heroStatNum {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-container);
+  margin-bottom: 6px;
+}
+
+.heroStatLabel {
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+}
+
+/* Benefits */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefitCard {
+  background: white;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: var(--transition);
+}
+
+.benefitCard:hover {
+  border-color: var(--primary-container);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.benefitIcon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.benefitTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-bottom: 8px;
+}
+
+.benefitDesc {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  line-height: 1.65;
+}
+
+/* Steps */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.stepNum {
+  width: 56px;
+  height: 56px;
+  background: var(--primary-container);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.stepConnector {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--outline-variant);
+  z-index: 0;
+}
+
+.stepTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-bottom: 8px;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  line-height: 1.65;
+}
+
+/* Plans */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.planCard {
+  background: white;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.planCard:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.planHighlighted {
+  background: var(--primary-container);
+  border-color: var(--primary-container);
+  box-shadow: var(--shadow-elevated);
+  transform: scale(1.02);
+}
+
+.planHighlighted:hover {
+  transform: scale(1.02) translateY(-4px);
+}
+
+.planBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.planName {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 6px;
+}
+
+.planHighlighted .planName {
+  color: white;
+}
+
+.planDesc {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  margin-bottom: 20px;
+}
+
+.planHighlighted .planDesc {
+  color: rgba(255,255,255,0.8);
+}
+
+.planPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.planAmount {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-container);
+}
+
+.planHighlighted .planAmount {
+  color: white;
+}
+
+.planPeriod {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+}
+
+.planHighlighted .planPeriod {
+  color: rgba(255,255,255,0.7);
+}
+
+.planFeatures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.planFeature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+}
+
+.planHighlighted .planFeature {
+  color: rgba(255,255,255,0.9);
+}
+
+.planCta {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Application Form */
+.formSection {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.formLeft h2 {
+  font-size: 2rem;
+  margin: 8px 0 12px;
+}
+
+.formTrust {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.formTrustItem {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form {
+  background: white;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--on-surface);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroContent, .formSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefitsGrid { grid-template-columns: repeat(2, 1fr); }
+
+  .stepsGrid { grid-template-columns: repeat(2, 1fr); }
+
+  .plansGrid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+}
+
+@media (max-width: 640px) {
+  .benefitsGrid { grid-template-columns: 1fr; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .heroStats { grid-template-columns: repeat(2, 1fr); }
+  .formRow { grid-template-columns: 1fr; }
+  .form { padding: 24px; }
+}
