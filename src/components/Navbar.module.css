@@ -140,6 +140,18 @@
   transition: var(--transition);
 }
 
+.hamburger span.barOpen:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger span.barOpen:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.barOpen:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Mobile Menu */
 .mobileMenu {
   display: flex;
@@ -148,6 +160,8 @@
   border-top: 1px solid var(--outline-variant);
   padding: 8px 0 16px;
   animation: fadeIn 0.2s ease;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
 }
 
 .mobileLink {
@@ -267,6 +281,7 @@
   .hamburger { display: flex; }
   .navActions .btn-primary { display: none; }
   .adminPortalBtn { display: none; }
+  .loginBtn { display: none; }
 }
 
 /* ─── Cart Button ─────────────────────────────── */

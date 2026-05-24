@@ -521,3 +521,131 @@
   color: var(--on-secondary-container);
   line-height: 1.5;
 }
+
+/* ─── Responsive Adjustments ───────────────────── */
+@media (max-width: 768px) {
+  .tableCard {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+  
+  .table,
+  .tableThead,
+  .tableRow,
+  .td,
+  .tdCenter,
+  .tdRight,
+  .table tbody {
+    display: block;
+    width: 100%;
+  }
+  
+  .tableThead {
+    display: none; /* Hide header columns on mobile */
+  }
+  
+  .tableRow {
+    background: var(--surface);
+    border: 1px solid var(--outline-variant);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+  
+  .td,
+  .tdCenter,
+  .tdRight {
+    padding: 8px 0;
+    text-align: left;
+    border: none;
+    background: transparent;
+  }
+  
+  .productCell {
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .productThumb {
+    width: 72px;
+    height: 90px;
+  }
+  
+  /* Mobile details row adjustments */
+  .tdCenter:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--surface-container);
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  
+  .tdCenter:nth-child(2)::before {
+    content: "Unit Price";
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+  }
+  
+  .tdCenter:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--surface-container);
+    padding-top: 8px;
+  }
+  
+  .tdCenter:nth-child(3)::before {
+    content: "Quantity";
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+  }
+  
+  .tdRight:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--surface-container);
+    padding-top: 8px;
+  }
+  
+  .tdRight:nth-child(4)::before {
+    content: "Subtotal";
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+  }
+  
+  .qtyStepper {
+    margin-left: auto;
+  }
+  
+  .tableFooter {
+    flex-direction: column-reverse;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .continueBtn,
+  .clearBtn {
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid var(--outline-variant);
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  .clearBtn {
+    border-color: #fca5a5;
+    background: #fff5f5;
+  }
+}
+

@@ -556,3 +556,17 @@
 
   .whyStats { flex-direction: column; gap: 16px; }
 }
+
+@media (max-width: 480px) {
+  .heroTitle { font-size: 1.85rem; }
+  .statsGrid { grid-template-columns: 1fr; }
+  .heroCtas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heroCtas a {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
